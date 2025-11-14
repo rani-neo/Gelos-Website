@@ -1,0 +1,269 @@
+html { scroll-behavior: smooth; }
+html, body { transform: none !important; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body{
+  font-family: Calibri, sans-serif;
+  background-color:#fff;
+  color:#000;
+  line-height:1.6;
+  padding-top: 0; /* sticky header doesn't need push-down */
+}
+
+/* ===== Header / Nav ===== */
+header{
+  position: sticky;
+  top: 0; left: 0; width: 100%;
+  height: 120px;                 /* actual header height */
+  background:#fff;
+  border-bottom:2px solid #e0e0e0;
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
+  z-index:1000;
+}
+
+.nav-wrapper{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 2rem;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:relative;
+}
+
+/* Logo */
+.logo{ display:flex; align-items:center; }
+.logo img{ height:40px; width:auto; display:block; }
+
+/* Desktop nav links (visible by default) */
+.nav-links{
+  list-style:none;
+  display:flex;                    /* visible on desktop */
+  gap:1.5rem;
+  flex-direction: row;
+  margin:0; padding:0;
+}
+.nav-links li{ padding:10px 0; text-align:center; }
+.nav-links li a{ text-decoration:none; color:#333; font-weight:bold; }
+.nav-links li a:hover{ color:rgb(160,132,99); }
+
+/* Hamburger (hidden on desktop) */
+.hamburger{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  background:none;
+  border:0;
+  position:absolute;
+  top:20px; right:20px;
+  z-index:1001;
+}
+
+/* Search */
+.search-container{ position: relative; }
+#search{
+  padding: 8px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-right: 10px;
+  padding-right: 35px;
+  width: 150px;
+}
+#search-btn{
+  position: absolute;
+  top: 50%; right: 10px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px; color: #333;
+}
+
+/* ===== Sections ===== */
+#about{
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+}
+.section{ padding: 60px 20px; overflow: visible; }
+
+.section-heading{ text-align:center; margin-bottom:30px; font-family: Georgia, serif; font-size: 28pt; }
+.section-heading h2{
+  font-family: Georgia, serif; font-size: 28pt; color: rgb(160, 132, 99);
+  padding-bottom: 10px; border-bottom: 3px solid rgb(160, 132, 99); font-stretch: condensed;
+}
+
+/* ===== Carousel ===== */
+.carousel-container{
+  position: relative; width: 100%; height: 500px; overflow: hidden; margin-bottom: 30px;
+}
+.carousel-inner{ height:100%; overflow:hidden; }
+.carousel-item{
+  min-height: 300px; display:flex; align-items:center;
+  position: relative; height: 400px; overflow-y:auto; padding:10px; margin-bottom:20px;
+}
+.carousel-item h2{ white-space: normal; position: relative; z-index: 10; }
+.carousel-item img{ object-fit: cover; height: 100%; width: 160%; object-position: center center; }
+
+.carousel-caption{ bottom:20px; left:0; right:0; text-align:end; }
+.carousel-caption h3{
+  font-family: Georgia, serif; font-size: 22pt; font-weight: normal; color: rgb(160, 132, 99); margin-bottom: 20px;
+}
+
+.btn-red{
+  background-color: red; color:#fff; font-weight:bold; padding:10px 25px; border:none;
+  border-radius:5px; text-decoration:none; font-size:16px; transition: background-color .3s;
+}
+.btn-red:hover{ background-color:#b71c1c; }
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  background-color: white; border-radius: 50%; padding: 10px;
+}
+.carousel-control-prev-icon.bronze, .carousel-control-next-icon.bronze{ background-color: rgb(160, 132, 99); }
+
+/* ===== Case study sections (about.html) ===== */
+.case-study-section{
+  display:none; padding:30px; background-color:#fff; box-shadow:0 4px 10px rgba(0,0,0,.1); margin-bottom:30px;
+}
+.case-study-section h1{ font-family: Georgia, serif; color: rgb(160, 132, 99); font-size: 36px; margin-bottom: 20px; }
+.case-study-section p{ font-size:18px; line-height:1.6; color:#333; }
+
+.logo{ max-width:200px; height:auto; }
+
+.back-to-home{
+  display:inline-block; margin-top:20px; color: rgb(160, 132, 99);
+  font-weight:bold; text-decoration:none; border-bottom:2px solid rgb(160, 132, 99);
+}
+.back-to-home:hover{ color:red; border-color:red; }
+
+.text-center{ text-align:center; }
+.section{ padding: 40px 20px; }
+.container-section{ max-width:1140px; margin:0 auto; }
+
+.section-four-wrapper{
+  background-color:#f9f6f2; padding-top:60px; padding-bottom:60px; border-top:2px solid #e0dcd7;
+}
+
+/* Contact */
+.container{ font-family: Calibri, sans-serif; color:#000; }
+.contact-section{ position:relative; padding-bottom:60px; }
+.read-more-btn{
+  position:absolute; bottom:20px; left:50%; transform:translateX(-50%);
+  background-color:#d9534f; border:none; font-weight:bold; padding:10px 20px;
+}
+.read-more-btn:hover{ background-color:#c9302c; }
+
+h2{ font-size:28pt; font-family: Georgia, serif; color: rgb(160, 132, 99); }
+p{ font-size:12pt; margin-bottom:20px; }
+.form-label{ font-weight:bold; }
+.form-control{ border-radius:8px; padding:10px; font-size:14px; }
+
+.col-md-1 > div{ background-color:#a9a9a9; width:2px; height:100%; }
+.text-danger{ font-size:12px; }
+.btn-danger{ background-color:#d9534f; border:none; font-weight:bold; padding:10px 20px; margin-top:10px; }
+.btn-danger:hover{ background-color:#c9302c; }
+
+.section-four-wrapper .col-md-5{ position:relative; min-height:300px; padding-bottom:60px; }
+.section-four-wrapper .col-md-5 .btn-danger{ position:absolute; bottom:0; left:0; }
+
+/* ===== Company Offering / Accordion ===== */
+#company-offering{ background-color:#f8f8f8; padding:60px 0; width:90%; margin:0 auto; }
+#company-offering h2{ font-family: Georgia, serif; font-size: 22pt; color: rgb(160, 132, 99); text-align:center; margin-bottom:40px; }
+
+.accordion-item{ background-color:#f4f4f4; border:1px solid #ccc; margin-bottom:20px; border-radius:5px; overflow:hidden; }
+.accordion-button{
+  background-color:#f4f4f4; padding:15px 20px; font-family: Calibri, sans-serif; font-size:14pt; color:#000; font-weight:bold;
+  display:flex; align-items:center; justify-content:space-between; border:none; transition: background-color .3s; position:relative;
+}
+.accordion-button img{ width:32px; height:32px; object-fit:cover; margin-right:15px; }
+.accordion-button::after{ transition: transform .3s; }
+.accordion-button[aria-expanded="true"]::after{ transform: rotate(180deg); }
+.accordion-collapse{ background-color:#ffffff; transition: all .3s; }
+.accordion-body{
+  font-family: Calibri, sans-serif; font-size:12pt; color:#000; padding:15px 20px; line-height:1.2; margin:10pt 0;
+}
+.accordion-body ol{ padding-left:20px; margin-top:10px; }
+.accordion-body a{ color:#0056b3; text-decoration:underline; font-weight:normal; }
+.accordion-body a:hover{ color:#003d80; }
+.accordion-button[role="button"]{ cursor:pointer; }
+
+/* ===== Values Grid ===== */
+#company-values{ background-color:#ffffff; padding:60px 0; }
+.value-box{
+  background-color:#f4f4f4; border-radius:10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align:left; transition: transform .3s, box-shadow .3s;
+}
+.value-box:hover{ transform: translateY(-8px); box-shadow: 0 4px 10px rgba(0,0,0,.15); }
+.value-icon{ width:40px; height:40px; display:block; margin-bottom:15px; }
+.value-title{ font-family: Georgia, serif; font-size:18pt; font-weight:bold; color: rgb(160, 132, 99); margin-bottom:10px; }
+.value-text{ font-family: Calibri, sans-serif; font-size:12pt; line-height:1.5; color:#000; }
+
+/* ===== Generic responsive bits ===== */
+@media (max-width: 768px){
+  .col-md-1{ display:none; }
+  .row{ flex-direction: column; }
+}
+
+/* ===== Mobile nav (fix: correct @media, single source of truth) ===== */
+@media (max-width: 768px){
+  .hamburger{ display:block; }
+
+  /* Hide links on mobile until toggled; show as dropdown under the 120px header */
+  .nav-links{
+    display:none;              /* hidden by default on mobile */
+    position:absolute;
+    top:120px;                 /* exactly below the header height */
+    right:20px;
+    background:#fff;
+    border:1px solid #ccc;
+    border-radius:10px;
+    padding:1rem;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+    width:200px;
+    flex-direction:column;
+    gap:10px;
+    z-index:1001;
+  }
+
+  .nav-links.active{ display:flex; } /* toggled on by JS */
+
+  .nav-links li{ margin:0; }
+  .nav-links li a{ font-size:16px; color:#333; }
+
+  /* Carousel tweaks */
+  .carousel-container{ height:400px; }
+  .carousel-caption h3{ font-size:22pt; }
+
+  /* Values / Offering minor sizing */
+  #company-offering{ width:95%; padding:40px 0; }
+  .accordion-button{ font-size:14pt; padding:12px 15px; }
+  .accordion-button img{ width:24px; height:24px; margin-right:10px; }
+  .accordion-body{ font-size:14pt; }
+
+  .value-icon{ width:24px; height:24px; }
+  .value-text{ font-size:14pt; }
+}
+/* Chatbot theme (Gelos palette) */
+  /* Force DF CX bubble visible, above everything */
+df-messenger{
+  display: block !important;
+  position: fixed !important;
+  right: 16px !important;
+  bottom: 16px !important;
+  z-index: 2147483647 !important;   /* max */
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  pointer-events: auto !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+
+  /* (Optional) mobile nudge */
+  @media (max-width: 576px) {
+    df-messenger { right: 12px !important; bottom: 12px !important; }
+  }

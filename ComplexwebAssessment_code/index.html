@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <title>Gelos Enterprises</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <div class="nav-wrapper">
+      <a class="logo" href="#">
+        <img src="images/Gelos-company-logo.png" alt="Gelos Enterprises Logo" >
+      </a>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">&#9776;</button>
+
+      <!-- Search -->
+      <div class="search-container">
+        <input type="text" id="search" placeholder="Search..." >
+        <button type="submit" id="search-btn" aria-label="Search">&#128269;</button>
+      </div>
+
+      <!-- Nav links -->
+      <ul class="nav-links" id="navLinks">
+        <li class="nav-item"><a href="#about" class="nav-link">About the company</a></li>
+        <li class="nav-item"><a href="#offering" class="nav-link">Company Offerings</a></li>
+        <li class="nav-item"><a href="#company-values" class="nav-link">Company Values</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section 1: About -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="text-center mb-4">About The Company</h2>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <!-- Indicators (Bootstrap 5 format) -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+          </div>
+
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/Gelos-business-improvement.png" class="d-block w-100" alt="Improving operations">
+              <div class="carousel-caption">
+                <h3>Improving operations through Gelos products &amp; services</h3>
+                <a href="about.html?section=operations" class="btn-red">Read More</a>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="images/Gelos-business-problem-solving.jpg" class="d-block w-100" alt="Solving business problems">
+              <div class="carousel-caption">
+                <h3>Solving business problems</h3>
+                <a href="about.html?section=problems" class="btn-red">Know More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bronze" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon bronze" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Company Offerings -->
+    <section class="my-5" id="offering">
+      <h2 class="text-center mb-4">Company Offerings</h2>
+
+      <div class="accordion" id="offeringAccordion">
+        <!-- Digital Transformation -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingDigital">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseDigital" aria-expanded="true" aria-controls="collapseDigital">
+              <img src="images/pexels-cottonbro-3584974.jpg" alt="Digital Transformation Icon" class="me-2"
+                   style="width: 24px; height: 24px;">
+              Digital Transformation
+            </button>
+          </h2>
+          <div id="collapseDigital" class="accordion-collapse collapse show" aria-labelledby="headingDigital"
+               data-bs-parent="#offeringAccordion">
+            <div class="accordion-body">
+              To help our clients leverage the state-of-art technologies, we provide a tailored approach to enable
+              change in the digital space. Our prior works include developing mobile applications, website applications,
+              and organization software development, among other digital capabilities.
+              To know more, <a href="#contact" class="text-danger fw-bold">contact us</a>.
+            </div>
+          </div>
+        </div>
+
+        <!-- Cloud Services -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingCloud">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCloud"
+                    aria-expanded="true" aria-controls="collapseCloud">
+              <img src="images/pexels-igor-passchier-111147847-27681569.jpg" alt="Cloud Services Icon" class="me-2"
+                   style="width: 24px; height: 24px;">
+              Cloud Services
+            </button>
+          </h2>
+          <div id="collapseCloud" class="accordion-collapse collapse show" aria-labelledby="headingCloud"
+               data-bs-parent="#offeringAccordion">
+            <div class="accordion-body">
+              Our Cloud programs include a range of services from full application development platforms to servers,
+              storage, and virtual desktops. We offer the following:
+              <ol>
+                <li>Software as a service (SaaS)</li>
+                <li>Platform as a service (PaaS)</li>
+                <li>Infrastructure as a service (IaaS)</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artificial Intelligence -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingAI">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAI"
+                    aria-expanded="true" aria-controls="collapseAI">
+              <img src="images/pexels-cottonbro-3584974.jpg" alt="AI Icon" class="me-2" style="width: 24px; height: 24px;">
+              Artificial Intelligence
+            </button>
+          </h2>
+          <div id="collapseAI" class="accordion-collapse collapse show" aria-labelledby="headingAI"
+               data-bs-parent="#offeringAccordion">
+            <div class="accordion-body">
+              Artificial intelligence services at Gelos can help you drive smart evolution of your workflows, technology
+              and the entire organization. Our industry experts help you implement a data-first strategy, augment with
+              third-party sources, and operationalize and accelerate AI integration across your enterprise to generate
+              positive business growth.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Company Values -->
+    <section id="company-values" class="section bg-white py-5">
+      <div class="container" style="max-width: 1200px;">
+        <h2 class="text-center mb-5" style="font-family: Georgia, serif; font-size: 28pt; color: rgb(160, 132, 99);">
+          Company Values
+        </h2>
+        <div class="row g-4">
+          <!-- Integrity -->
+          <div class="col-md-4">
+            <article class="value-box p-4">
+              <img src="images/Gelos-Values-Integrity.jpg" alt="Shield icon representing integrity" class="value-icon">
+              <h3 class="value-title">Integrity</h3>
+              <p class="value-text">
+                We are committed to our values and protect our company at an organizational level.
+              </p>
+            </article>
+          </div>
+          <!-- Inclusivity -->
+          <div class="col-md-4">
+            <article class="value-box p-4">
+              <img src="images/Gelos-Values-Inclusivity.jpg" alt="Diversity icon representing inclusivity" class="value-icon">
+              <h3 class="value-title">Inclusivity</h3>
+              <p class="value-text">
+                We strongly believe in diversity as the core of our growth. Our policies hold zero tolerance towards discrimination.
+              </p>
+            </article>
+          </div>
+          <!-- Innovation -->
+          <div class="col-md-4">
+            <article class="value-box p-4">
+              <img src="images/darkmode_logo.png" alt="Brain icon representing innovation" class="value-icon">
+              <h3 class="value-title">Innovation</h3>
+              <p class="value-text">
+                Innovation is one of our core values. Our culture imbibes curiosity, technological ingenuity and adaptability.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Contact -->
+    <div class="section-four-wrapper py-5" id="contact">
+      <div class="container mt-5">
+        <div class="row">
+          <!-- Left -->
+          <div class="col-md-5">
+            <h2>Contact Us</h2>
+            <p>Improving operations through Gelos products &amp; services.</p>
+            <a href="about.html?section=operations" class="btn btn-danger">Read More</a>
+          </div>
+
+          <!-- Divider -->
+          <div class="col-md-1 d-flex justify-content-center align-items-center">
+            <div style="width: 2px; height: 100%; background-color: #ccc;"></div>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="col-md-6">
+            <form id="contactFormRight" class="mt-4">
+              <div class="mb-3">
+                <label for="nameRight" class="form-label">Name</label>
+                <input type="text" class="form-control" id="nameRight" name="nameRight">
+                <div id="nameErrorRight" class="text-danger"></div>
+              </div>
+              <div class="mb-3">
+                <label for="emailRight" class="form-label">Email</label>
+                <input type="email" class="form-control" id="emailRight" name="emailRight">
+                <div id="emailErrorRight" class="text-danger"></div>
+              </div>
+              <div class="mb-3">
+                <label for="messageRight" class="form-label">Message</label>
+                <textarea class="form-control" id="messageRight" name="messageRight" rows="4"></textarea>
+                <div id="messageErrorRight" class="text-danger"></div>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Any extra input...">
+              </div>
+              <button type="submit" class="btn btn-danger">Send</button>
+              <div id="formErrorRight" class="text-danger mt-2"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer bg-dark text-white py-4">
+      <div class="container text-center">
+        <p>&copy; 2025 Gelos Enterprises. All Rights Reserved.</p>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://instagram.com" target="_blank" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/main.js"></script>
+<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+<df-messenger
+  location="australia-southeast1"
+  project-id="gelos-chatbot"
+  agent-id="edc9da2c-1af9-4e5d-a907-b962fda6982e"
+  language-code="en"
+  max-query-length="-1">
+  <df-messenger-chat
+    chat-title="gelosChatbot">
+  </df-messenger-chat>
+</df-messenger>
+<style>
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: Google Sans;
+    --df-messenger-chat-background: #f3f6fc;
+    --df-messenger-message-user-background: #d3e3fd;
+    --df-messenger-message-bot-background: #fff;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 350px;
+  }
+</style>
+
+<!-- Your JS (after the widget) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+
+</body>
+</html>
+
+
